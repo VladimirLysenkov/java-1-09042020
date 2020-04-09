@@ -15,6 +15,8 @@ public class MainClass {
         System.out.println(task10and20(2, 12));
         isPositiveOrNegativeNumber(7);
         System.out.println(isInteger(-6));
+        printString("Вася");
+        isLeapYear(2020);
 
     }
 
@@ -31,7 +33,7 @@ public class MainClass {
         System.out.println("Hello World");
     }
 
-    // метод принимающий на вход два целых числа и проверяющий, что их сумма лежит в пределах от 10 до 20 (включительно)
+    // метод принимающий на вход два целых числа и проверяющий, что их сумма лежит в пределах от 10 до 20 (включительно), если да – вернуть true, в противном случае – false.
     public static boolean task10and20(int x1, int x2){
         return (x1 + x2) > 10 && (x1 + x2) <= 20;
     }
@@ -45,5 +47,16 @@ public class MainClass {
     // метод, которому в качестве параметра передается целое число. Метод должен вернуть true, если число отрицательное.
     public static boolean isInteger(int b1){
         return b1 < 0;
+    }
+
+    // метод, которому в качестве параметра передается строка, обозначающая имя. Метод должен вывести в консоль сообщение «Привет, указанное_имя!»
+    public static void printString(String name){
+        System.out.println("Привет, " + name + "!");
+    }
+
+    // метод, который определяет, является ли год високосным, и выводит сообщение в консоль. Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
+    public static void isLeapYear(int year){
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) System.out.println(year + " високосный год");
+        else System.out.println(year + " не високосный год");
     }
 }
