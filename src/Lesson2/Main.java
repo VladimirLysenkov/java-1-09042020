@@ -15,6 +15,11 @@ public class Main {
         fillArray(array2);
         System.out.println("Заполненный массив: " + Arrays.toString(array2));
 
+        int[] array3 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        changeArray(array3);
+        System.out.println("Измененный массив: " + Arrays.toString(array3));
+
+        fillDiagonal(4);
 
     }
 
@@ -32,6 +37,26 @@ public class Main {
         }
     }
 
+    //Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ] пройти по нему циклом, и числа меньшие 6 умножить на 2;
+    public static void changeArray(int[] array){
+        for(int i = 0; i < array.length; i++){
+            if(array[i] < 6){
+                array[i] *= 2;
+            }
+        }
+    }
+
+    //Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое), и с помощью цикла(-ов) заполнить его диагональные элементы единицами;
+    public static void fillDiagonal(int size){
+        int[][] doubleArray = new int[size][size];
+        for(int i = 0; i < size; i++){
+            for(int j = 0; j < size; j++){
+                doubleArray[i][j] = (i == j || j == (size - i - 1))? 1 : (int)(Math.random()*100);
+                System.out.printf("%5d", doubleArray[i][j]);
+            }
+            System.out.println();
+        }
+    }
 
 
 }
