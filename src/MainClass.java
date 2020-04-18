@@ -21,7 +21,7 @@ public class MainClass {
     }
 
 
-    // метод вычисляющий выражение a * (b + (c / d)) и возвращающий результат
+    // метод вычисляющий выражение a * (b + (c / d)) и возвращающий результат.
     public static float calculation(float a, float b, float c, float d) {
         return a * (b + (c / d));
 
