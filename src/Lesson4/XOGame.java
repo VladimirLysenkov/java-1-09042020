@@ -11,7 +11,6 @@ public class XOGame {
     static  char [] [] map;
     static Scanner sc = new Scanner(System.in);
     static Random random = new Random();
-    private static final int TO_WIN = 3;
 
     public static void main (String[] args){
         initMap();
