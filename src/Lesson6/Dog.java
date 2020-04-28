@@ -7,6 +7,7 @@ public class Dog extends Animal {
         super(name);
     }
     int maxRunLength = 500;
+    int maxSwimDistance = 10;
 
     @Override
     void run(int runDistance) {
@@ -19,7 +20,6 @@ public class Dog extends Animal {
 
     @Override
     void canSwim(int swimDistance) {
-        int maxSwimDistance = 10;
         if (swimDistance > 0 && swimDistance <= maxSwimDistance){
             System.out.println(name + " проплыл " + swimDistance + " м.");
         }
