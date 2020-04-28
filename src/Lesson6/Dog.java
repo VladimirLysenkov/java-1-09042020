@@ -6,10 +6,10 @@ public class Dog extends Animal {
     public Dog(String name) {
         super(name);
     }
+    int maxRunLength = 500;
 
     @Override
     void run(int runDistance) {
-        int maxRunLength = 500;
         if (runDistance < maxRunLength) {
             System.out.println(name + " пробежал " + runDistance + " м.");
         } else {

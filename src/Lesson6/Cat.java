@@ -5,10 +5,10 @@ public class Cat extends Animal {
     public Cat(String name) {
         super(name);
     }
+    int maxRunLength = 200;
 
     @Override
     void run(int runDistance) {
-        int maxRunLength = 200;
         if (runDistance < maxRunLength) {
             System.out.println(
                     name + " пробежала " + runDistance + " м.");
